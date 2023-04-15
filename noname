@@ -162,59 +162,59 @@ dns:
       - +.googletagservices.com
 secret: b0b0d359-8482-40a2-acce-0a4c47b8c260
 proxy-providers:
-  Nodes:
+  nodes:
     type: http
-    path: ./profiles/proxies/Nodes.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/nodes.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  HK:
+  hk:
     type: http
-    path: ./profiles/proxies/HK.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/hk.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     filter: Hong Kong
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  SG:
+  sg:
     type: http
-    path: ./profiles/proxies/SG.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/sg.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     filter: Singapore
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  US:
+  us:
     type: http
-    path: ./profiles/proxies/United States.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/united states.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     filter: United States
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  TW:
+  tw:
     type: http
-    path: ./profiles/proxies/Taiwan.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/taiwan.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     filter: Taiwan
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  Desire:
+  desire:
     type: http
-    path: ./profiles/proxies/Desire.yaml
-    url: https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=WD_Trojan&url=https%3A%2F%2Ffuqing.ch%2Fsubscribe%2Fybvbb-ej3rvsql
+    path: ./profiles/proxies/desire.yaml
+    url:   https://api.fuqing.ch/sub?target=clash&emoji=true&udp=true&scv=true&new_name=true&filename=wd_trojan&url=https%3a%2f%2ffuqing.ch%2fsubscribe%2fpgxvn--qs3kblv 
     interval: 3600
     filter: Expire
     health-check:
@@ -227,14 +227,14 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - Nodes
+      - nodes
   - name: Bilibili
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - HK
-      - TW
+      - hk
+      - tw
     proxies:
       - DIRECT
   - name: Telegram
@@ -242,33 +242,33 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - SG
+      - sg
   - name: Apple
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - US
+      - us
   - name: Google
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - US
+      - us
   - name: Youtube
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - HK
-      - TW
-      - Desire
+      - hk
+      - tw
+      - desire
   - name: Netflix
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - Desire
+      - desire
   - name: Microsoft
     type: select
     url: http://www.gstatic.com/generate_204
@@ -280,23 +280,23 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - HK
-      - US
-      - Desire
+      - hk
+      - us
+      - desire
   - name: Github
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - SG
-      - Desire
+      - sg
+      - desire
   - name: Steam
     type: select
     interval: 300
     url: http://www.gstatic.com/generate_204
     use:
-      - HK
-      - Desire
+      - hk
+      - desire
     proxies:
       - DIRECT
   - name: Epic
@@ -304,8 +304,8 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
     use:
-      - HK
-      - Desire
+      - hk
+      - desire
     proxies:
       - DIRECT
   - name: Nvidia
@@ -313,15 +313,37 @@ proxy-groups:
     interval: 300
     url: http://www.gstatic.com/generate_204
     use:
-      - HK
-      - Desire
+      - hk
+      - desire
     proxies:
       - DIRECT
+  
+  - name: StackOverFlow
+    type: select
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+    use:
+      - us 
+      - desire
+  
+  - name: ChatGPT
+    type: select
+    interval: 300
+    url: http://www.gstatic.com/generate_204
+    use:
+      - us 
+      - desire
 rule-providers:
+  reject1:
+    type: http
+    behavior: domain
+    url: https://yy.xx-xzh.xyz/reject.txt
+    path: ./ruleset/reject1.yaml
+    interval: 86400
   reject:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    url: https://cdn.jsdelivr.net/gh/loyalsoldier/clash-rules@release/reject.txt
     path: ./ruleset/reject.yaml
     interval: 86400
   icloud:
@@ -357,20 +379,24 @@ rule-providers:
   microsoft:
     type: http
     behavior: domain
-    url: http://yy.xx-xzh.xyz/microsoft.txt
+    url: https://yy.xx-xzh.xyz/microsoft.txt
     path: ./ruleset/microsoft.yaml
 
   steam:
     type: http
     behavior: domain
-    url: http://yy.xx-xzh.xyz/steam.txt
+    url: https://yy.xx-xzh.xyz/steam.txt
     path: ./ruleset/steam.yaml
 rules:
   - IP-CIDR,43.143.131.87/32,DIRECT
   - DOMAIN-SUFFIX,xx-xzh.xyz,DIRECT
+  - DOMAIN-SUFFIX,openai.com,ChatGPT
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,stackoverflow.com,StackOverFlow
   - RULE-SET,applications,DIRECT
   - RULE-SET,steam,Steam
   - RULE-SET,microsoft,Microsoft
+  - RULE-SET,reject1,REJECT
   - RULE-SET,reject,REJECT
   - RULE-SET,telegramcidr,Telegram
   - DOMAIN-KEYWORD,google,Google
