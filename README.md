@@ -1,17 +1,48 @@
-# noname
+# HowToUseGit
 
-终于知道正确的操作流程了，以后就按照这个流程走了
+### 本地开始
 
-首先建立远程仓库
+1.  建立本地仓库：git init
+2. 切换分支为主分支：git branch -m main
+3. 和远端建立联系：git remote add origin SSH\HTTP
+4. 添加到缓存区： git add .
+5. 提交到本地仓库：git commit -m " first commmit "
+6. 推流到远程仓库：git push -u origin main
 
-在本地 git init
+### 从github开始
 
-切换为主要分支 git branch -m main
+1. 建立远端仓库
 
-和远端建立联系 git remote add origin SSH\HTTP
+2. 克隆到本地：git clone git@github.com:xxx-x-x/Custom_Rules.git
 
-添加 git add .
+   > 克隆到本地后，会用origin代表远程仓库
 
-提交 git commit -m " first commmit "
+3. 查看远端分支：git branch -a
 
-推流 git push -u origin main
+4. 查看本地分支：git branch
+
+5. 创建一个本地分支，和远端分支同步：git checkout -b develop origin/develop
+
+   > 创建一个本地分支develop追踪远程分支develop
+   >
+   > 第一个develop是本地分支名，第二个develop是远程分支名
+
+### 自己修改后
+
+1. 添加到缓存区：git add . 
+
+2. 缓存区提交到本地仓库：git commit -m "更改描述"
+
+3. 本地仓库推送到远程仓库：git push origin develop origin/develop
+
+   > 注意顺序，将本地分支develop推送到远程主机origin上的develop远程分支上
+   >
+   > 第一个develop代表本地分支，第二个origin代表远程主机，第三个develop代表远程分支
+
+### 别人修改后
+
+1. 拉到本地仓库：git pull origin develop:develop
+
+   > 注意顺序：将远程仓库里的develop分支拉到本地分支develop
+   >
+   > 第一个origin代表远程主机，第二个develop代表远程分支，第三个develop代表本地分支
